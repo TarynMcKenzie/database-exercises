@@ -1,9 +1,9 @@
-\W
 USE codeup_test_db;
 
 DROP TABLE IF EXISTS albums;
 
 CREATE TABLE albums (
+
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     artist VARCHAR(100) DEFAULT 'NONE',
     name  VARCHAR(100) NOT NULL,
@@ -11,4 +11,5 @@ CREATE TABLE albums (
     sales FLOAT NOT NULL,
     genre VARCHAR(500) DEFAULT 'NONE',
     PRIMARY KEY (id)
+
 );
