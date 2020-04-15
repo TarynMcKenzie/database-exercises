@@ -18,7 +18,7 @@ SELECT * FROM albums WHERE artist = 'Pink Floyd';
 
 -- TODO: 1 b. The year Sgt. Pepper's Lonely Hearts Club Band was released <-- Swapped with different artist
 SELECT 'The year Adele`s album 21 was released' AS 'Exercise 1 b.';
-SELECT release_date FROM albums WHERE name = 21;
+SELECT release_date FROM albums WHERE `name` = 21;
 
 -- TODO: 1 c. The genre for Nevermind
 SELECT 'The genre for Nevermind' AS 'Exercise 1 c.';
@@ -26,7 +26,7 @@ SELECT genre FROM albums WHERE `name` = 'Nevermind';
 
 -- TODO: 1 d. Which albums were released in the 1990s
 SELECT 'Which albums were released in the 1990s' AS 'Exercise 1 d.';
-SELECT * FROM albums WHERE release_date BETWEEN 1990 and 1999;
+SELECT * FROM albums WHERE release_date BETWEEN 1990 AND 1999;
 
 -- TODO: 1 e. Which albums had less than 20 million certified sales
 SELECT 'Which albums had less than 20 million certified sales' AS 'Exercise 1 e.';
