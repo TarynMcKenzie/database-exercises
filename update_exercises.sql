@@ -11,7 +11,7 @@ SELECT 'All albums in your table' AS 'Exercise 2 a.';
 SELECT * FROM albums;
 
 SELECT 'All albums released before 1980' AS 'Exercise 2 b.';
-SELECT * FROM albums WHERE release_date BETWEEN 1900 AND 1980;
+SELECT * FROM albums WHERE release_date < 1980;
 
 SELECT 'All albums by Michael Jackson' AS 'Exercise 2 c.';
 SELECT * FROM albums WHERE artist = 'Michael Jackson';
@@ -28,8 +28,8 @@ UPDATE albums SET sales = sales * 10;
 SELECT * FROM albums;
 
 SELECT 'Move all the albums before 1980 back to the 1800s' AS 'Exercise 3 b.';
-UPDATE albums SET release_date = concat('18', SUBSTRING(release_date FROM 3));
-SELECT * FROM albums WHERE release_date BETWEEN 1800 AND 1900;
+UPDATE albums SET release_date = concat('18', SUBSTRING(release_date FROM 3)); -- or (in keeping with the data type) you can do WHERE release_date = release_date - 100
+SELECT * FROM albums WHERE release_date BETWEEN 1800 AND 1980;
 
 SELECT 'Change Michael Jackson to Peter Jackson' AS 'Exercise 3 c.';
 UPDATE albums SET artist = 'Peter Jackson' WHERE artist = 'Michael Jackson';
